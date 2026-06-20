@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Play } from "lucide-react";
 import { useRef } from "react";
 import heroBg from "../assets/images/hero_section.jpg";
+import mobileHeroBg from "../assets/images/ChatGPT Image Jun 20, 2026, 01_53_54 PM.png";
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -27,7 +28,13 @@ export default function Hero() {
           <img 
             src={heroBg}
             alt="Naga Arjun Portrait" 
-            className="w-full h-full object-cover object-top md:object-center transition-all duration-[2s]"
+            className="hidden md:block w-full h-full object-cover object-top md:object-center transition-all duration-[2s]"
+            referrerPolicy="no-referrer"
+          />
+          <img 
+            src={mobileHeroBg}
+            alt="Naga Arjun Mobile Background" 
+            className="block md:hidden w-full h-full object-cover object-center transition-all duration-[2s]"
             referrerPolicy="no-referrer"
           />
         </div>
@@ -52,82 +59,117 @@ export default function Hero() {
       {/* Technical HUD Overlay Removed */}
 
       {/* Content Layer */}
-      <div className="relative z-30 container mx-auto px-6 md:px-12 w-full h-full flex flex-col justify-end md:justify-center items-center md:items-start pb-12 md:pb-0">
-        
-        {/* Massive Cinematic Headline */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95, filter: "blur(12px)" }}
-          animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-          transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 1.2 }}
-          className="relative w-full"
-        >
-          {/* Desktop View (Split) */}
-          <div className="hidden md:flex flex-row items-end justify-between w-full font-display uppercase tracking-tighter leading-[0.8] mb-12">
-            {/* Left Block */}
-            <div className="flex flex-col items-start gap-2">
-              <span 
-                className="text-7xl lg:text-9xl font-bold text-transparent"
-                style={{ WebkitTextStroke: "2px rgba(255, 255, 255, 0.8)" }}
-              >
-                Hello
-              </span>
-              <span className="text-7xl lg:text-9xl font-extrabold text-white">
-                I'm
-              </span>
-            </div>
-
-            {/* Right Block */}
-            <div className="flex flex-col items-end gap-2 text-right">
-              <span className="text-7xl lg:text-9xl font-extrabold text-white">
-                Naga
-              </span>
-              <span 
-                className="text-7xl lg:text-9xl font-bold text-transparent"
-                style={{ WebkitTextStroke: "2px rgba(255, 255, 255, 0.8)" }}
-              >
-                Arjun
-              </span>
-            </div>
-          </div>
-
-          {/* Mobile/Vertical View (Stacked) */}
-          <div className="flex md:hidden flex-col items-center justify-center w-full font-display uppercase tracking-tighter leading-[1] mb-10 text-center">
-            <span 
-              className="text-5xl font-bold text-transparent mb-2"
-              style={{ WebkitTextStroke: "1.5px rgba(255, 255, 255, 0.9)" }}
-            >
-              Hello I'm
-            </span>
-            <span className="text-6xl font-extrabold text-white">
-              Naga Arjun
-            </span>
-          </div>
-        </motion.div>
-
-        {/* Premium CTA */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 2.2, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-20 md:mt-32 flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8 w-full"
-        >
-          <Link to="/gallery" className="group relative flex items-center justify-center gap-4 px-6 md:px-10 py-4 md:py-5 bg-white text-black font-semibold uppercase tracking-widest text-[9px] md:text-xs overflow-hidden transition-all hover:scale-105 rounded-full flex-1 sm:flex-none w-full sm:w-auto max-w-[240px] md:max-w-none">
-            <span className="relative z-10 flex items-center gap-3">
-              <Play className="w-3 md:w-4 h-3 md:h-4 fill-black" /> <span className="whitespace-nowrap">View Portfolio</span>
-            </span>
-            <div className="absolute inset-0 bg-brand-orange translate-y-[101%] group-hover:translate-y-0 transition-transform duration-500 ease-[0.16,1,0.3,1]" />
-          </Link>
-          
-          <a 
-            href="https://res.cloudinary.com/dfynxuxzn/image/upload/v1778769805/Black_And_White_Minimalist_Professional_Resume_A4_pmmx9i.png" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="group p-4 md:px-10 md:py-5 bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 rounded-full font-mono text-[9px] md:text-xs text-white uppercase tracking-[0.2em] transition-all hover:scale-105 flex items-center justify-center w-full sm:w-auto"
+      <div className="relative z-30 container mx-auto px-6 md:px-12 w-full h-full">
+        {/* Mobile Hero Content */}
+        <div className="md:hidden absolute inset-x-0 top-0 flex flex-col items-center gap-6 px-6 pt-8">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, filter: "blur(12px)" }}
+            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 1.2 }}
+            className="w-full max-w-[28rem] text-center"
           >
-            <span className="hidden md:inline">View Resume</span>
-            <span className="md:hidden">CV</span>
-          </a>
-        </motion.div>
+            <div className="flex flex-col items-center justify-center w-full font-display uppercase tracking-tighter leading-[1]">
+              <span
+                className="text-4xl sm:text-5xl font-bold text-transparent mb-2"
+                style={{ WebkitTextStroke: "1.5px rgba(255, 255, 255, 0.9)" }}
+              >
+                Hello I'm
+              </span>
+              <span className="text-5xl sm:text-6xl font-extrabold text-white">
+                Naga Arjun
+              </span>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 2.2, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col items-center justify-center gap-4 w-full max-w-[28rem]"
+          >
+            <Link
+              to="/gallery"
+              className="group relative flex items-center justify-center gap-4 px-6 py-4 bg-white text-black font-semibold uppercase tracking-widest text-[9px] overflow-hidden transition-all hover:scale-105 rounded-full w-full"
+            >
+              <span className="relative z-10 flex items-center gap-3">
+                <Play className="w-3 h-3 fill-black" /> <span className="whitespace-nowrap">View Portfolio</span>
+              </span>
+              <div className="absolute inset-0 bg-brand-orange translate-y-[101%] group-hover:translate-y-0 transition-transform duration-500 ease-[0.16,1,0.3,1]" />
+            </Link>
+
+            <a
+              href="https://res.cloudinary.com/dfynxuxzn/image/upload/v1778769805/Black_And_White_Minimalist_Professional_Resume_A4_pmmx9i.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex items-center justify-center px-6 py-4 bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 rounded-full font-mono text-[9px] text-white uppercase tracking-[0.2em] transition-all hover:scale-105 w-full"
+            >
+              CV
+            </a>
+          </motion.div>
+        </div>
+
+        {/* Desktop Hero Content */}
+        <div className="hidden md:block absolute inset-0">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, filter: "blur(12px)" }}
+            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 1.2 }}
+            className="absolute left-0 top-[30%] flex max-w-[28rem] flex-col items-start gap-4 font-display uppercase tracking-tighter leading-[0.8] md:pl-24 lg:pl-28"
+          >
+            <span
+              className="text-7xl lg:text-9xl font-bold text-transparent"
+              style={{ WebkitTextStroke: "2px rgba(255, 255, 255, 0.8)" }}
+            >
+              Hello
+            </span>
+            <span className="text-7xl lg:text-9xl font-extrabold text-white">
+              I'm
+            </span>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, filter: "blur(12px)" }}
+            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 1.2 }}
+            className="absolute right-0 top-[30%] flex max-w-[28rem] flex-col items-end gap-4 text-right font-display uppercase tracking-tighter leading-[0.8] md:pr-24 lg:pr-28"
+          >
+            <span className="text-7xl lg:text-9xl font-extrabold text-white">
+              Naga
+            </span>
+            <span
+              className="text-7xl lg:text-9xl font-bold text-transparent"
+              style={{ WebkitTextStroke: "2px rgba(255, 255, 255, 0.8)" }}
+            >
+              Arjun
+            </span>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 2.2, ease: [0.16, 1, 0.3, 1] }}
+            className="absolute inset-x-0 bottom-12 flex justify-center gap-4 px-6"
+          >
+            <Link
+              to="/gallery"
+              className="group relative flex items-center justify-center gap-4 px-8 py-5 bg-white text-black font-semibold uppercase tracking-widest text-xs overflow-hidden transition-all hover:scale-105 rounded-full max-w-[240px]"
+            >
+              <span className="relative z-10 flex items-center gap-3">
+                <Play className="w-4 h-4 fill-black" /> <span className="whitespace-nowrap">View Portfolio</span>
+              </span>
+              <div className="absolute inset-0 bg-brand-orange translate-y-[101%] group-hover:translate-y-0 transition-transform duration-500 ease-[0.16,1,0.3,1]" />
+            </Link>
+
+            <a
+              href="https://res.cloudinary.com/dfynxuxzn/image/upload/v1778769805/Black_And_White_Minimalist_Professional_Resume_A4_pmmx9i.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative px-8 py-5 bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 rounded-full font-mono text-xs text-white uppercase tracking-[0.2em] transition-all hover:scale-105 flex items-center justify-center"
+            >
+              View Resume
+            </a>
+          </motion.div>
+        </div>
       </div>
 
       {/* Timecode / Camera HUD Decorative Elements */}
