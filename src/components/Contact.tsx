@@ -13,7 +13,7 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="max-w-2xl"
         >
-          <h2 className="font-sans text-[40px] font-semibold text-white mb-4 tracking-tight">
+          <h2 className="font-sans text-[32px] sm:text-[40px] font-semibold text-white mb-4 tracking-tight">
             Let's Work Together
           </h2>
           

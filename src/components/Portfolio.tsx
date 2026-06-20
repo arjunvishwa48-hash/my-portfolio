@@ -57,13 +57,13 @@ export default function Portfolio() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex gap-1.5 bg-white/5 border border-white/10 p-1.5 rounded-sm backdrop-blur-xl shadow-2xl"
+            className="flex flex-wrap justify-center md:justify-end gap-1.5 bg-white/5 border border-white/10 p-1.5 rounded-sm backdrop-blur-xl shadow-2xl"
           >
             {categories.map(cat => (
               <button
                 key={cat.id}
                 onClick={() => setFilter(cat.id)}
-                className={`px-5 py-2.5 font-mono text-[10px] uppercase tracking-[0.2em] transition-all duration-300 rounded-sm whitespace-nowrap cursor-pointer ${
+                className={`px-4 sm:px-5 py-2.5 font-mono text-[10px] uppercase tracking-[0.2em] transition-all duration-300 rounded-sm whitespace-nowrap cursor-pointer ${
                   filter === cat.id
                     ? "bg-brand-orange text-black shadow-lg shadow-brand-orange/20 font-bold"
                     : "text-white/40 hover:text-white hover:bg-white/5"

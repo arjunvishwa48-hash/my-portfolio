@@ -15,7 +15,7 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
-    <section ref={ref} className="relative h-screen w-full bg-brand-black overflow-hidden flex flex-col items-start justify-center" style={{ position: "relative" }}>
+    <section ref={ref} className="relative min-h-screen md:h-screen w-full bg-brand-black overflow-hidden flex flex-col items-start justify-center" style={{ position: "relative" }}>
       
       {/* Parallax Background Container */}
       <motion.div 
@@ -109,9 +109,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 2.2, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-20 md:mt-32 flex flex-row items-center justify-center gap-4 md:gap-8 w-full"
+          className="mt-20 md:mt-32 flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8 w-full"
         >
-          <Link to="/gallery" className="group relative flex items-center justify-center gap-4 px-6 md:px-10 py-4 md:py-5 bg-white text-black font-semibold uppercase tracking-widest text-[9px] md:text-xs overflow-hidden transition-all hover:scale-105 rounded-full flex-1 md:flex-none max-w-[240px] md:max-w-none">
+          <Link to="/gallery" className="group relative flex items-center justify-center gap-4 px-6 md:px-10 py-4 md:py-5 bg-white text-black font-semibold uppercase tracking-widest text-[9px] md:text-xs overflow-hidden transition-all hover:scale-105 rounded-full flex-1 sm:flex-none w-full sm:w-auto max-w-[240px] md:max-w-none">
             <span className="relative z-10 flex items-center gap-3">
               <Play className="w-3 md:w-4 h-3 md:h-4 fill-black" /> <span className="whitespace-nowrap">View Portfolio</span>
             </span>
@@ -122,7 +122,7 @@ export default function Hero() {
             href="https://res.cloudinary.com/dfynxuxzn/image/upload/v1778769805/Black_And_White_Minimalist_Professional_Resume_A4_pmmx9i.png" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="group p-4 md:px-10 md:py-5 bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 rounded-full font-mono text-[9px] md:text-xs text-white uppercase tracking-[0.2em] transition-all hover:scale-105 flex items-center justify-center aspect-square md:aspect-auto"
+            className="group p-4 md:px-10 md:py-5 bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 rounded-full font-mono text-[9px] md:text-xs text-white uppercase tracking-[0.2em] transition-all hover:scale-105 flex items-center justify-center w-full sm:w-auto"
           >
             <span className="hidden md:inline">View Resume</span>
             <span className="md:hidden">CV</span>

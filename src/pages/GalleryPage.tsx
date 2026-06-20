@@ -54,7 +54,7 @@ export default function GalleryPage() {
               <Link to="/" className="inline-flex items-center gap-2 text-brand-orange font-mono text-[10px] uppercase tracking-[0.3em] mb-8 hover:translate-x-[-4px] transition-transform group">
                 <ArrowLeft className="w-4 h-4 transition-transform group-hover:scale-110" /> [ RETURN TO BASE ]
               </Link>
-              <h1 className="font-display text-6xl md:text-8xl font-bold uppercase tracking-tighter leading-[0.85] mb-4">
+              <h1 className="font-display text-5xl sm:text-6xl md:text-8xl font-bold uppercase tracking-tighter leading-[0.85] mb-4">
                 Creative <br />
                 <span className="text-stroke text-transparent italic">Inventory</span>
               </h1>
@@ -67,7 +67,7 @@ export default function GalleryPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-wrap gap-1.5 bg-white/5 border border-white/10 p-1.5 rounded-sm backdrop-blur-xl shadow-2xl max-w-full md:max-w-none justify-start md:justify-end shrink-0"
+              className="flex flex-wrap justify-center md:justify-end gap-1.5 bg-white/5 border border-white/10 p-1.5 rounded-sm backdrop-blur-xl shadow-2xl max-w-full md:max-w-none shrink-0"
             >
               {categories.map(cat => (
                 <button

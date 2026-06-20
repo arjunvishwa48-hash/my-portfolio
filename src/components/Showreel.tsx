@@ -123,7 +123,7 @@ export default function Showreel() {
           className="flex flex-col items-center"
         >
           <div className="mb-12 text-center">
-            <h2 className="font-display text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-4">
+            <h2 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-4">
               {showreel.title.split(' ')[0]} <span className="text-stroke">{showreel.title.split(' ').slice(1).join(' ')}</span>
             </h2>
             <p className="font-mono text-gray-400 tracking-widest text-sm md:text-base uppercase">

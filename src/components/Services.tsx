@@ -59,7 +59,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-brand-charcoal p-10 lg:p-12 group hover:bg-brand-gray transition-colors duration-500"
+                className="bg-brand-charcoal p-8 sm:p-10 lg:p-12 group hover:bg-brand-gray transition-colors duration-500"
               >
                 <div className="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center mb-8 text-gray-500 group-hover:text-brand-blue group-hover:border-brand-blue/50 transition-all duration-300">
                   {service.icon}
