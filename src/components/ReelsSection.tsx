@@ -49,7 +49,7 @@ export default function ReelsSection() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   title={`Cinematic Reel ${reel.id}`}
-                  style={{ border: 'none' }}
+                  style={{ border: 'none', minHeight: '100%' }}
                 />
                 
                 {/* Visual Overlay for Cinematic Look */}

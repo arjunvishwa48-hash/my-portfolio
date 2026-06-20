@@ -27,7 +27,7 @@ export default function Hero() {
           <img 
             src={heroBg}
             alt="Naga Arjun Portrait" 
-            className="w-full h-full object-cover transition-all duration-[2s]"
+            className="w-full h-full object-cover object-top md:object-center transition-all duration-[2s]"
             referrerPolicy="no-referrer"
           />
         </div>
@@ -52,7 +52,7 @@ export default function Hero() {
       {/* Technical HUD Overlay Removed */}
 
       {/* Content Layer */}
-      <div className="relative z-30 container mx-auto px-6 md:px-12 w-full mt-24">
+      <div className="relative z-30 container mx-auto px-6 md:px-12 w-full h-full flex flex-col justify-end md:justify-center items-center md:items-start pb-12 md:pb-0">
         
         {/* Massive Cinematic Headline */}
         <motion.div
