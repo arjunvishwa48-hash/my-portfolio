@@ -161,7 +161,7 @@ export default function Hero() {
             </Link>
 
             <a
-              href="https://drive.google.com/file/d/1GnJ_LOQcTZ9c2r3O55uTxgcWbsHvDMKz/view"
+              href="https://drive.google.com/file/d/1iDJzsVWrNfuHsHOsFbWk5vgCbYvXafE0/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative px-8 py-5 bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 rounded-full font-mono text-xs text-white uppercase tracking-[0.2em] transition-all hover:scale-105 flex items-center justify-center"
